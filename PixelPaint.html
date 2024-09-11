@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    #toolbar {
+      padding: 10px;
+      background-color: #f3f3f3;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #toolbar input[type="color"] {
+      margin: 5px;
+      padding: 5px;
+    }
+    #canvasContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    #pixelCanvas {
+      display: grid;
+      grid-template-columns: repeat(50, 10px); /* 50x50 grid, each cell 10px */
+      grid-template-rows: repeat(50, 10px);
+      gap: 1px;
+      border: 1px solid black;
+    }
+    .pixel {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pixel Art Tool</h1>
+  </header>
+
+  <!-- Toolbar with Color Picker -->
+  <div id="toolbar">
+    <label for="colorPicker">Choose Color:</label>
+    <input type="color" id="colorPicker" value="#000000">
+    <button id="clearCanvas">Clear Canvas</button>
+  </div>
+
+  <!-- Pixel Grid Canvas -->
+  <div id="canvasContainer">
+    <div id="pixelCanvas"></div>
+  </div>
+
+  <script>
+    // Reference to the pixel canvas and color picker
+    const pixelCanvas = document.getElementById('pixelCanvas');
+    const colorPicker = document.getElementById('colorPicker');
+    let currentColor = colorPicker.value;
+
+    // Create a 50x50 grid for pixel art
+    const gridSize = 50;
+
+    function createPixelGrid() {
+      for (let i = 0; i < gridSize * gridSize; i++) {
+        const pixel = document.createElement('div');
+        pixel.classList.add('pixel');
+        pixel.addEventListener('click', colorPixel);
+        pixelCanvas.appendChild(pixel);
+      }
+    }
+
+    // Function to color the clicked pixel
+    function colorPixel(e) {
+      e.target.style.backgroundColor = currentColor;
+    }
+
+    // Update current color when the color picker changes
+    colorPicker.addEventListener('input', function() {
+      currentColor = this.value;
+    });
+
+    // Clear the canvas by resetting all pixels to white
+    document.getElementById('clearCanvas').addEventListener('click', function() {
+      const pixels = document.querySelectorAll('.pixel');
+      pixels.forEach(pixel => pixel.style.backgroundColor = '#fff');
+    });
+
+    // Initialize the pixel grid
+    createPixelGrid();
+  </script>
+</body>
+</html>
