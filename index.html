@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilty Gear Peak</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li class="logo">
+                <a href="#"><img src="https://ch3records.com/cdn/shop/files/ch3-009-ggst-product-cover_650x650.png?v=1721046030" alt="Logo" /></a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Daisuke_Ishiwatari">Daisuke Ishiwatari</a></li>
+            <li><a href="https://www.guiltygear.com/ggst/en/">Guilty Gear</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="https://www.dustloop.com/w/GGST">Dustloop</a>
+                    <a href="https://www.arcsystemworks.com/game/guilty-gear-strive/">Merch</a>
+                    <a href="https://guiltygear.fandom.com/wiki/Guilty_Gear_-Strive-">Wiki</a>
+                </div>
+            </li>
+            <li><a href=HomeView.vue>Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Guilty Gear Peak</h1>
+        <div class="cheese-cards">
+            <!-- Potemkin Card -->
+            <div class="cheese-card">
+                <img src="https://www.dustloop.com/wiki/images/e/ec/GGST_Potemkin_Portrait.png" alt="Potemkin">
+                <h2>Potemkin</h2>
+                <p>Potemkin is a powerful fighter and a former slave of the Zepp Empire.</p>
+                <button onclick="openModal('modal-potemkin')">Learn more</button>
+            </div>
+            <!-- Modal for Potemkin -->
+            <div id="modal-potemkin" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-potemkin')">&times;</span>
+                    <h2>Potemkin</h2>
+                    <p>Potemkin is a former slave in the Zepp Empire who now serves as a soldier, fighting for his newfound freedom and values. Known for his incredible strength and sense of justice.</p>
+                </div>
+            </div>
+
+            <!-- Slayer Card -->
+            <div class="cheese-card">
+                <img src="https://www.dustloop.com/wiki/images/thumb/0/0a/GGST_Slayer_Portrait.png/1200px-GGST_Slayer_Portrait.png" alt="Slayer">
+                <h2>Slayer</h2>
+                <p>Slayer is a vampire and the founder of the Assassin's Guild.</p>
+                <button onclick="openModal('modal-slayer')">Learn more</button>
+            </div>
+            <!-- Modal for Slayer -->
+            <div id="modal-slayer" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-slayer')">&times;</span>
+                    <h2>Slayer</h2>
+                    <p>Slayer is a refined vampire and founder of the Assassin's Guild, known for his charm and eloquence. He wields immense strength and grace in battle.</p>
+                </div>
+            </div>
+
+            <!-- Bedman Card -->
+            <div class="cheese-card">
+                <img src="https://www.dustloop.com/wiki/images/3/33/GGST_Bedman_Portrait.png" alt="Bedman?">
+                <h2>Bedman?</h2>
+                <p>Bedman? is a mysterious character who "fought" while asleep.</p>
+                <button onclick="openModal('modal-bedman')">Learn more</button>
+            </div>
+            <!-- Modal for Bedman -->
+            <div id="modal-bedman" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-bedman')">&times;</span>
+                    <h2>Bedman?</h2>
+                    <p>Bedman? fights while asleep, using a mechanical bed for unpredictable attacks. A strange yet formidable fighter with a dark and mysterious past.</p>
+                </div>
+            </div>
+
+            <!-- Ramlethal Valentine Card -->
+            <div class="cheese-card">
+                <img src="https://www.dustloop.com/wiki/images/f/fa/GGST_Ramlethal_Valentine_Portrait.png" alt="Ramlethal Valentine">
+                <h2>Ramlethal Valentine</h2>
+                <p>Ramlethal Valentine, a being created to destroy humanity.</p>
+                <button onclick="openModal('modal-ramlethal')">Learn more</button>
+            </div>
+            <!-- Modal for Ramlethal Valentine -->
+            <div id="modal-ramlethal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-ramlethal')">&times;</span>
+                    <h2>Ramlethal Valentine</h2>
+                    <p>Ramlethal Valentine was created to destroy humanity but eventually chooses to ally with them. She wields two massive swords in battle.</p>
+                </div>
+            </div>
+
+            <!-- Giovanna Card -->
+            <div class="cheese-card">
+                <img src="https://www.dustloop.com/wiki/images/3/3f/GGST_Giovanna_Portrait.png" alt="Giovanna">
+                <h2>Giovanna</h2>
+                <p>Giovanna is a special operations officer.</p>
+                <button onclick="openModal('modal-giovanna')">Learn more</button>
+            </div>
+            <!-- Modal for Giovanna -->
+            <div id="modal-giovanna" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-giovanna')">&times;</span>
+                    <h2>Giovanna</h2>
+                    <p>Giovanna, a special operations officer, fights alongside her spirit wolf, Rei, bringing justice with ferocity and a strong sense of duty.</p>
+                </div>
+            </div>
+
+            <!-- A.B.A Card -->
+            <div class="cheese-card">
+                <img src="https://static.wikia.nocookie.net/guilty-gear/images/3/31/ABA_Guilty_Gear_Strive.png/revision/latest/thumbnail/width/360/height/450?cb=20240612175455" alt="A.B.A.">
+                <h2>A.B.A.</h2>
+                <p>A.B.A is a homunculus with a cursed existence.</p>
+                <button onclick="openModal('modal-aba')">Learn more</button>
+            </div>
+            <!-- Modal for A.B.A. -->
+            <div id="modal-aba" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-aba')">&times;</span>
+                    <h2>A.B.A.</h2>
+                    <p>A.B.A. is a homunculus who wields a giant key named Paracelsus. She is on a quest to obtain a real body and end her cursed existence.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

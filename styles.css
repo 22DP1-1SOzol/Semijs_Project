@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fa0404;
+    color: #630303;
+}
+
+.navbar {
+    background-color: #000000;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar ul li .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* To separate logo from nav links */
+    align-items: center;
+}
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px; /* Spacing between the logo and nav items */
+}
+
+
+
+.navbar ul li .dropdown-content a:hover {
+    background-color: #555;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.cheese-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    padding: 20px;
+    
+}
+.image-container {
+    background-color: #444; /* Background color for the image section */
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px; /* Set height for the image */
+    object-fit: cover;
+}
+
+/* Content container styling */
+.content-container {
+    background-color: #555; /* Background color for the text section */
+    padding: 15px;
+    text-align: center;
+}
+
+.content-container h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.content-container p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.content-container button {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content-container button:hover {
+    background-color: #0088cc;
+}
+
+.cheese-card button {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cheese-card button:hover {
+    background-color: #0088cc;
+    transform: translateY(-2px); /* Small lift effect */
+}
+
+
+.cheese-card img {
+    width: 100%;
+    height:500px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the whole area */
+    object-position: top; /* Crop the image to show the top half */
+    outline: 2px solid white; /* Outline for the images */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cheese-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.cheese-card p {
+    padding: 0 15px 15px;
+    font-size: 0.9rem;
+}
+
+.cheese-card button {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cheese-card button:hover {
+    background-color: #0088cc;
+}
+
+.cheese-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.4); /* Light blue glow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3f0a0a;
+    color: #fff;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
